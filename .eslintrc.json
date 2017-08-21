@@ -1,0 +1,52 @@
+{
+	"root": true,
+	"env": {
+		"node": true,
+		"es6": true
+	},
+	"plugins": [
+		"import",
+		"node",
+		"standard"
+	],
+	"extends": [
+		"standard",
+		"plugin:import/recommended",
+		"plugin:node/recommended"
+	],
+	"rules": {
+		"array-bracket-spacing": [
+			"error",
+			"never"
+		],
+		"arrow-parens": [
+			"error",
+			"as-needed"
+		],
+		"comma-dangle": [
+			"error",
+			"always-multiline"
+		],
+		"indent": [
+			"error",
+			"tab"
+		],
+		"no-process-exit": "off",
+		"no-tabs": "off",
+		"object-curly-spacing": [
+			"error",
+			"never"
+		],
+		"node/no-unsupported-features": "off"
+	},
+	"overrides": [
+		{
+			"files": [
+				"src/index.js"
+			],
+			"parserOptions": {
+				"sourceType": "script"
+			}
+		}
+	]
+}
