@@ -10,11 +10,11 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "test": "tap test -Rspec --cov",
+    "test": "cross-env NODE_ENV=test nyc mocha",
     "lint": "eslint --fix .",
     "build": "babel src -d lib",
     "watch": "babel src -d lib -w",
-    "dev": "nodemon -w src --exec babel-node src"
+    "dev": "cross-env NODE_ENV=development nodemon -w src --exec babel-node src"
   },
   "repository": {
     "type": "git",
@@ -28,15 +28,19 @@
   "homepage": "https://github.com/jordanbtucker/babel-init#readme",
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-istanbul": "^4.1.4",
     "babel-preset-env": "^1.6.0",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.0.5",
     "eslint": "^4.4.1",
     "eslint-config-standard": "^10.2.1",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-node": "^5.1.1",
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
+    "mocha": "^3.5.0",
     "nodemon": "^1.11.0",
-    "tap": "^10.3.0"
+    "nyc": "^11.1.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0"
