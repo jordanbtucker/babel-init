@@ -37,6 +37,7 @@
 			"error",
 			"never"
 		],
+		"import/unambiguous": "off",
 		"node/no-unsupported-features": "off"
 	},
 	"overrides": [
