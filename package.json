@@ -10,11 +10,13 @@
     "node": ">=6.0.0"
   },
   "scripts": {
-    "test": "cross-env NODE_ENV=test nyc mocha",
-    "lint": "eslint --fix .",
     "build": "babel src -d lib",
-    "watch": "babel src -d lib -w",
-    "dev": "cross-env NODE_ENV=development nodemon -w src --exec babel-node src"
+    "debug": "cross-env DEBUG=* NODE_ENV=development nodemon -w src --exec babel-node src",
+    "dev": "cross-env NODE_ENV=development nodemon -w src --exec babel-node src",
+    "lint": "eslint --fix .",
+    "start": "node lib",
+    "test": "cross-env NODE_ENV=test nyc mocha --recursive",
+    "watch": "babel src -d lib -w"
   },
   "repository": {
     "type": "git",
