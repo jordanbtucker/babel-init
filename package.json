@@ -42,7 +42,8 @@
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.5.0",
     "nodemon": "^1.11.0",
-    "nyc": "^11.1.0"
+    "nyc": "^11.1.0",
+    "supertest": "^3.0.0"
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0"
