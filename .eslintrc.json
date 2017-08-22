@@ -39,15 +39,5 @@
 		],
 		"import/unambiguous": "off",
 		"node/no-unsupported-features": "off"
-	},
-	"overrides": [
-		{
-			"files": [
-				"src/index.js"
-			],
-			"parserOptions": {
-				"sourceType": "script"
-			}
-		}
-	]
+	}
 }
