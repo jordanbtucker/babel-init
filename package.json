@@ -11,12 +11,11 @@
   },
   "scripts": {
     "build": "babel src -d lib",
-    "debug": "cross-env DEBUG=* NODE_ENV=development nodemon -w src --exec babel-node src",
-    "dev": "cross-env NODE_ENV=development nodemon -w src --exec babel-node src",
+    "debug": "cross-env DEBUG=* NODE_ENV=development babel-watch src",
+    "dev": "cross-env NODE_ENV=development babel-watch src",
     "lint": "eslint --fix .",
     "start": "node lib",
-    "test": "cross-env NODE_ENV=test nyc mocha --recursive",
-    "watch": "babel src -d lib -w"
+    "test": "cross-env NODE_ENV=test nyc mocha --recursive"
   },
   "repository": {
     "type": "git",
@@ -33,6 +32,7 @@
     "babel-plugin-istanbul": "^4.1.4",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
+    "babel-watch": "^2.0.7",
     "cross-env": "^5.0.5",
     "eslint": "^4.4.1",
     "eslint-config-standard": "^10.2.1",
@@ -41,7 +41,6 @@
     "eslint-plugin-promise": "^3.5.0",
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.5.0",
-    "nodemon": "^1.11.0",
     "nyc": "^11.1.0",
     "supertest": "^3.0.0"
   },
