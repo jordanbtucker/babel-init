@@ -1,5 +1,6 @@
 {
 	"require": [
+		"dotenv/config",
 		"babel-register",
 		"babel-polyfill"
 	],

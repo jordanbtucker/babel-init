@@ -42,9 +42,10 @@
     "eslint-plugin-standard": "^3.0.1",
     "mocha": "^3.5.3",
     "nyc": "^11.2.1",
-    "supertest": "^3.0.0"
+    "sinon": "^4.0.0"
   },
   "dependencies": {
-    "babel-polyfill": "^6.26.0"
+    "babel-polyfill": "^6.26.0",
+    "dotenv": "^4.0.0"
   }
 }

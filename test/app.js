@@ -1,20 +1,22 @@
-import request from 'supertest'
-import app from '../src/app'
+import sinon from 'sinon'
 
-describe('app', () => {
-	before(done => {
-		app.listen(3000, done)
-	})
+import App from '../src/app'
 
-	after(done => {
-		app.close(done)
-	})
+describe('App', () => {
+	describe('run', () => {
+		it(`logs 'Hello, $NAME!'`, async () => {
+			const message = `Hello, ${process.env.NAME}!`
 
-	describe('GET /', () => {
-		it(`responds with 'Hello, World!`, async () => {
-			return request(app)
-				.get('/')
-				.expect(200, 'Hello, World!')
+			const mock = sinon.mock(console)
+			mock
+				.expects('log')
+				.calledWithExactly(message)
+
+			const app = new App()
+			await app.run()
+
+			mock.verify()
+			mock.restore()
 		})
 	})
 })

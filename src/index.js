@@ -1,7 +1,5 @@
-require('babel-polyfill')
-
-const app = require('./app')
-
-app.listen(3000, () => {
-	console.log('Listening on port 3000')
-})
+import 'dotenv/config'
+import 'babel-polyfill'
+import App from './app'
+const app = new App()
+app.run()
