@@ -10,6 +10,7 @@
     "node": ">=6.0.0"
   },
   "scripts": {
+    "coverage": "npm test && nyc report --reporter=html",
     "build": "npm run lint && babel src -d lib",
     "debug": "cross-env DEBUG=*,-babel NODE_ENV=development babel-node src",
     "dev": "cross-env NODE_ENV=development babel-node src",
