@@ -12,8 +12,8 @@
   "scripts": {
     "coverage": "npm test && nyc report --reporter=html",
     "build": "npm run lint && babel src -d lib",
-    "debug": "cross-env DEBUG=*,-babel NODE_ENV=development babel-node src",
-    "dev": "cross-env NODE_ENV=development babel-node src",
+    "debug": "cross-env DEBUG=*,-babel babel-node src",
+    "dev": "babel-node src",
     "lint": "eslint --fix .",
     "start": "node lib",
     "test": "npm run lint && cross-env NODE_ENV=test nyc mocha --recursive"
