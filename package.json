@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "babel src -d lib",
-    "debug": "cross-env DEBUG=* NODE_ENV=development babel-node src",
+    "debug": "cross-env DEBUG=*,-babel NODE_ENV=development babel-node src",
     "dev": "cross-env NODE_ENV=development babel-node src",
     "lint": "eslint --fix .",
     "start": "node lib",
@@ -29,6 +29,7 @@
   "homepage": "https://github.com/jordanbtucker/babel-init#readme",
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "debug": "^3.1.0",
     "dotenv": "^4.0.0"
   },
   "devDependencies": {
